@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* { box-sizing:border-box; margin:0; padding:0; font-family:'Poppins',sans-serif; }
+
+/* Floating animated background */
+.floating-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; overflow:hidden; }
+.shape { width:80px; height:80px; background:rgba(255,255,255,0.15); border-radius:50%; position:absolute;
+        animation:float 15s linear infinite; }
+.shape:nth-child(odd){ background:rgba(52,152,219,0.2); }
+.shape:nth-child(even){ background:rgba(231,76,60,0.2); }
+.shape:nth-child(1){ top:10%; left:20%; animation-delay:0s;}
+.shape:nth-child(2){ top:70%; left:10%; animation-delay:2s;}
+.shape:nth-child(3){ top:30%; left:80%; animation-delay:4s;}
+.shape:nth-child(4){ top:50%; left:50%; animation-delay:6s;}
+.shape:nth-child(5){ top:90%; left:30%; animation-delay:8s;}
+.shape:nth-child(6){ top:20%; left:60%; animation-delay:10s;}
+.shape:nth-child(7){ top:80%; left:70%; animation-delay:12s;}
+.shape:nth-child(8){ top:40%; left:40%; animation-delay:14s;}
+.shape:nth-child(9){ top:60%; left:20%; animation-delay:16s;}
+.shape:nth-child(10){ top:10%; left:70%; animation-delay:18s;}
+.shape:nth-child(11){ top:90%; left:80%; animation-delay:20s;}
+.shape:nth-child(12){ top:50%; left:90%; animation-delay:22s;}
+
+@keyframes float { 0%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(-50px) rotate(180deg);} 100%{transform:translateY(0) rotate(360deg);} }
+
+/* Loading Screen */
+.loading-screen { display:flex; justify-content:center; align-items:center; height:100vh; background:linear-gradient(135deg,#667eea,#764ba2); color:white; font-size:18px; }
+
+/* Header */
+.dashboard-header { display:flex; justify-content:space-between; align-items:center; padding:0 25px; height:70px; background:rgba(0,0,0,0.85); color:white; position:sticky; top:0; z-index:10; }
+.dashboard-logo { font-size:22px; font-weight:bold; }
+.dashboard-user { display:flex; align-items:center; gap:12px; }
+.dashboard-user .avatar { width:40px; height:40px; border-radius:50%; object-fit:cover; }
+.logout-btn { padding:8px 16px; background:#e74c3c; color:white; border:none; border-radius:10px; cursor:pointer; font-weight:600; }
+
+/* Tabs */
+.dashboard-tabs { display:flex; background:rgba(0,0,0,0.6); position:sticky; top:70px; z-index:9; }
+.dashboard-tabs button { flex:1; padding:16px; color:white; background:transparent; border:none; cursor:pointer; font-weight:600; transition:0.3s; }
+.dashboard-tabs button.active { background:#3498db; }
+
+/* Main Content */
+.dashboard-content { flex:1; padding:30px; display:flex; justify-content:center; align-items:flex-start; gap:25px; flex-wrap:wrap; }
+
+/* Cards */
+.profile-card, .qrcode-card { background:rgba(255,255,255,0.95); padding:30px; border-radius:20px; text-align:center; width:350px; box-shadow:0 10px 25px rgba(0,0,0,0.2); transition:transform 0.3s; }
+.profile-card:hover, .qrcode-card:hover { transform:translateY(-5px); }
+
+/* Avatar */
+.profile-avatar { width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:10px; }
+.avatar-placeholder { width:100px; height:100px; border-radius:50%; background:#ccc; margin-bottom:10px; display:inline-block; }
+.avatar-buttons { display:flex; justify-content:center; gap:10px; margin-bottom:15px; }
+
+/* Form */
+.profile-form input, .profile-form select { width:100%; padding:12px; margin:10px 0; border-radius:10px; border:1px solid #ccc; font-size:15px; }
+.profile-form button { width:100%; padding:12px; border:none; border-radius:10px; background:#2ecc71; color:white; font-weight:bold; cursor:pointer; transition:0.3s; }
+.profile-form button:hover { opacity:0.85; }
+.profile-message { margin-top:12px; font-size:14px; }
+
+/* QR Code */
+.qr-display { background:white; padding:20px; border-radius:15px; display:inline-block; margin:20px 0; }
+.qr-actions { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.btn { padding:10px 18px; border-radius:8px; font-weight:bold; cursor:pointer; border:none; transition:0.3s; }
+.btn-blue { background:#3498db; color:white; }
+.btn-green { background:#2ecc71; color:white; }
+.btn-red { background:#e74c3c; color:white; }
+.btn-gray { background:#636e72; color:white; }
+.btn:hover { opacity:0.85; }
+.share-status { padding:10px; margin-bottom:10px; border-radius:10px; }
+.share-status.success { background:#d4edda; color:#155724; }
+.share-status.error { background:#f8d7da; color:#721c24; }

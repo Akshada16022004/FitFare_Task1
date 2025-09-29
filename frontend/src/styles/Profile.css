@@ -1,0 +1,25 @@
+.qr-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.qr-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.qr-btn {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #6c63ff, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.qr-btn:hover {
+  opacity: 0.85;
+}
