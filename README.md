@@ -1,4 +1,4 @@
-## 📸 Dashboard Screenshot
+## 📸 Dashboard Screenshots
 <img width="1920" height="1024" alt="Screenshot1" src="https://github.com/user-attachments/assets/da6271c4-df4d-4046-8f87-82b10807cfd7" />
 <br><br>
 <img width="1920" height="1026" alt="Screenshot2" src="https://github.com/user-attachments/assets/585f341e-2372-403c-8da5-9054e19f0d62" />
